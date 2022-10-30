@@ -15,6 +15,8 @@ class CreateCierresTable extends Migration
     {
         Schema::create('cierres', function (Blueprint $table) {
             $table->id();
+            $table->string('fecha_inicio');
+            $table->string('fecha_final');
             $table->timestamps();
         });
     }

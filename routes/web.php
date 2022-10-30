@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post(
+    '/api/clientes/guardad',
+    [App\Http\Controllers\ClientesController::class, 'guardar']
+);
+//Route::post('/api/cargos/guardar',[CargosController::class, 'store']);
+Auth::routes();

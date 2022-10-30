@@ -15,6 +15,13 @@ class CreateVentasTable extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
+            $table->string('cedula');
+            $table->string('cantidad');
+            $table->string('nombre_producto');
+            $table->string('pecio_unitario');
+            $table->string('descuento');
+            $table->string('total');
+            $table->string('total_apagar');
             $table->timestamps();
         });
     }
